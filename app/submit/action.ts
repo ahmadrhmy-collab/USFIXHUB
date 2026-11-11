@@ -136,7 +136,7 @@ export async function onSubmitToolAction(
         parsed.data.description
       )
       const { object: enrichment } = await generateObject({
-        model: config.aiModel,
+        model: config.aiModel as any,
         schema: enrichmentSchema,
         prompt: enrichmentPrompt,
       })
